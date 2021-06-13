@@ -12,6 +12,7 @@ import { NetworkComponent } from './network/network.component';
 import { ServorComponent } from './servor/servor.component';
 import { VservorComponent } from './vservor/vservor.component';
 import { AjouterutilisateurComponent } from './admin/ajouterutilisateur/ajouterutilisateur.component' ;
+import { UpdateComponent } from './admin/update/update.component';
 
 const routes: Routes = [
   {path : 'login', component: LoginComponent},
@@ -25,7 +26,8 @@ const routes: Routes = [
   {path: 'inventories', component: InventoriesComponent},
   {path: 'dcg', component: DcgComponent},
   {path: 'admin', component: AdminComponent},
-  {path: 'admin/ajouterutilisateur', component: AjouterutilisateurComponent}
+  {path: 'ajouterutilisateur', component: AjouterutilisateurComponent},
+  {path: 'update/:username',component:UpdateComponent}
 ];
 
 @NgModule({

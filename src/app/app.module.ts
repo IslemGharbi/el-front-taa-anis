@@ -18,6 +18,8 @@ import { AgmCoreModule } from '@agm/core';
 import { AdminComponent } from './admin/admin.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AjouterutilisateurComponent } from './admin/ajouterutilisateur/ajouterutilisateur.component';
+import { UpdateComponent } from './admin/update/update.component';
+import { PipeModule } from './pipe/pipe.module';
 
 @NgModule({
   declarations: [
@@ -34,12 +36,14 @@ import { AjouterutilisateurComponent } from './admin/ajouterutilisateur/ajouteru
     AdminComponent,
     NavbarComponent,
     AjouterutilisateurComponent,
-    
+    UpdateComponent,
+
   ],
   imports: [
     HttpClientModule,
     BrowserModule,
     AppRoutingModule,
+    PipeModule,
     FormsModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDvGXe-J_-JIKZABDo3m_SjXQz88sLOvZk'})

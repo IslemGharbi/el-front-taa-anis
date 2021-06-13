@@ -104,9 +104,9 @@ TT DC
           <div class="collapse navbar-collapse justify-content-end">
             <form class="navbar-form">
               <div class="input-group no-border">
-                <input type="text" value="" class="form-control" placeholder="Search...">
+                <input type="text"  class="form-control"  (input)="searsh($event)" placeholder="Search...">
                 <button type="submit" class="btn btn-white btn-round btn-just-icon">
-                  <i class="material-icons">search</i>
+                  <i class="material-icons" >search</i>
                   <div class="ripple-container"></div>
                 </button>
               </div>
@@ -168,142 +168,44 @@ TT DC
                 <div class="card-body">
                   <div class="table-responsive">
                     <table class="table">
-                      <thead class=" text-primary">
+                      <thead  class=" text-primary">
                         <th>
                           ID
                         </th>
                         <th>
-                          Name
+                          username
                         </th>
                         <th>
-                          Role
+                        email
                         </th>
-                        <th>
-                          City
-                        </th>
-                        <th>
-                          Salary
-                        </th>
+
                       </thead>
-                      <tbody >
+                      <tbody *ngFor=" let user of users | searsh :textBus : 'username' ; let i = index" >
                         <tr>
                           <td>
-                            1
+                            {{user.id}}
                           </td>
                           <td>
-                            Dakota Rice
+                           {{user.username}}
                           </td>
                           <td>
-                            Niger
+                           {{user.email}}
                           </td>
                           <td>
-                            Oud-Turnhout
-                          </td>
-                          <td class="text-primary">
-                            $36,738
-                          </td>
-
-                          <td>
-                          <span class="material-icons"  >
-                            delete
+                          <span  (click)="deleteUser(user.username)" (click)="delete(i)"class="material-icons">
+                            person_remove
                             </span></td>
                             <td>
-                            <span class="material-icons">
+                            <span (click)="modify(user.username)" class="material-icons">
                               update
-                              </span>
-                              </td>
+                              </span></td>
 
-
-                        </tr>
-                        <tr>
-                          <td>
-                            2
-                          </td>
-                          <td>
-                            Minerva Hooper
-                          </td>
-                          <td>
-                            Curaçao
-                          </td>
-                          <td>
-                            Sinaai-Waas
-                          </td>
-                          <td class="text-primary">
-                            $23,789
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            3
-                          </td>
-                          <td>
-                            Sage Rodriguez
-                          </td>
-                          <td>
-                            Netherlands
-                          </td>
-                          <td>
-                            Baileux
-                          </td>
-                          <td class="text-primary">
-                            $56,142
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            4
-                          </td>
-                          <td>
-                            Philip Chaney
-                          </td>
-                          <td>
-                            Korea, South
-                          </td>
-                          <td>
-                            Overland Park
-                          </td>
-                          <td class="text-primary">
-                            $38,735
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            5
-                          </td>
-                          <td>
-                            Doris Greene
-                          </td>
-                          <td>
-                            Malawi
-                          </td>
-                          <td>
-                            Feldkirchen in Kärnten
-                          </td>
-                          <td class="text-primary">
-                            $63,542
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            6
-                          </td>
-                          <td>
-                            Mason Porter
-                          </td>
-                          <td>
-                            Chile
-                          </td>
-                          <td>
-                            Gloucester
-                          </td>
-                          <td class="text-primary">
-                            $78,615
-                          </td>
-                        </tr>
                       </tbody>
                     </table>
+                    <a  href="./ajouterutilisateur">
+                    <button  class="btn btn-primary pull-right">Ajouter Utilisateur</button></a>
                   </div>
                 </div>
               </div>
-              <button type="submit" href="admin/ajouterutilisateur" class="btn btn-primary pull-right">Ajouter Utilisateur</button>
+
             </div>

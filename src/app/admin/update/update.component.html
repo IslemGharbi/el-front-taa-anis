@@ -15,7 +15,7 @@ TT DC
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   <!-- CSS Files -->
-  <link href="servor.component.css" rel="stylesheet" />
+  <link href="update.component.css" rel="stylesheet" />
 </head>
 
 <body class="">
@@ -37,7 +37,7 @@ TT DC
               <p>Dashboard</p>
             </a>
           </li>
-          <li class="nav-item ">
+          <li class="nav-item active ">
             <a href="./admin" class="nav-link" >
               <i class="material-icons"> manage_accounts </i>
               <p>Gestion des utilisateurs</p>
@@ -61,7 +61,7 @@ TT DC
               <p>Réseaux</p>
             </a>
           </li>
-          <li class="nav-item active">
+          <li class="nav-item ">
             <a href="./servor" class="nav-link" >
               <i class="material-icons">dns</i>
               <p>Serveur</p>
@@ -155,4 +155,52 @@ TT DC
           </div>
         </div>
       </nav>
-      <!-- End Navbar -->
+
+
+      <div class="content">
+        <div class="container-fluid">
+          <div class="row">
+
+              <div class="card">
+                <div class="card-header card-header-primary">
+                  <h4 class="card-title">Modifier utilisateur</h4>
+                  <p class="card-category">Modifier votre utilisateur</p>
+                </div>
+                <div class="card-body">
+
+                    <div class="row">
+
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Username</label>
+                          <input type="text" name="username" [(ngModel)]="user.username"class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Email address</label>
+                          <input type="email" name="email" [(ngModel)]="user.email" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Etat</label>
+                          <input type="password" name="password" class="form-control">
+                        </div>
+                      </div>
+
+                    </div>
+
+
+
+
+
+
+                    <button  (click)="modify()"   class="btn btn-primary pull-right">Modifier Utilisateur</button>
+                    <div class="clearfix"></div>
+
+                </div>
+              </div>
+            </div>

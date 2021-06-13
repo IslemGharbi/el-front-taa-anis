@@ -13,18 +13,32 @@ user:any={}
   constructor(
     private http : HttpClient,
     private  service : APIService,
-    private router : Router
+    private router : Router,
+
   ) { }
 
   ngOnInit(): void {
+
   }
+
+
+
 ajouter(){
+  console.log(this.user)
   return this.http.post('http://localhost:8080/register',this.user).subscribe(
-    data => this.router.navigate(['admin']),
-    error => console.log(error)
+    data => {
+this.navigate()
+    },
+
+
   )
 
+
 }
+navigate(){
+  this.router.navigate(['admin'])
+}
+
 
 
 }
