@@ -147,7 +147,7 @@ TT DC
                   <a class="dropdown-item" href="#">Profile</a>
                   <a class="dropdown-item" href="#">Settings</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item"> 
+                  <a class="dropdown-item">
                    Log out</a>
                 </div>
               </li>
@@ -156,3 +156,64 @@ TT DC
         </div>
       </nav>
       <!-- End Navbar -->
+      <div class="content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header card-header-primary">
+                  <h4 class="card-title ">Gestion des fournisseurs</h4>
+
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table class="table">
+                      <thead  class=" text-primary">
+                        <th>
+                          ID
+                        </th>
+                        <th>
+                          Nom
+                        </th>
+                        <th>
+                          Num TEL
+                        </th>
+                        <th>
+                          Email
+                        </th>
+
+
+                      </thead>
+                      <tbody *ngFor=" let fournisseur of fournisseurs ; let i = index" >
+                        <tr>
+                          <td>
+                            {{fournisseur.id}}
+                          </td>
+                          <td>
+                           {{fournisseur.name}}
+                          </td>
+                          <td>
+                           {{fournisseur.tel}}
+                          </td>
+                          <td>
+                            {{fournisseur.email}}
+                          </td>
+
+                          <td>
+                          <span  (click)="deleteUser(fournisseur.id)" (click)="delete(i)"class="material-icons">
+                            person_remove
+                            </span></td>
+                            <td>
+                            <span (click)="modify(fournisseur.id)" class="material-icons">
+                              update
+                              </span></td>
+
+                      </tbody>
+                    </table>
+                    <a  href="./add-fournisseur">
+                    <button  class="btn btn-primary pull-right">Ajouter Un fournisseur</button></a>
+                  </div>
+                </div>
+              </div>
+
+            </div>

@@ -13,6 +13,12 @@ import { ServorComponent } from './servor/servor.component';
 import { VservorComponent } from './vservor/vservor.component';
 import { AjouterutilisateurComponent } from './admin/ajouterutilisateur/ajouterutilisateur.component' ;
 import { UpdateComponent } from './admin/update/update.component';
+import { AddServorComponent } from './servor/add-servor/add-servor.component';
+import { UpdateServorComponent } from './servor/update-servor/update-servor.component';
+import { UpdateRackComponent } from './inventories/update-rack/update-rack.component';
+import { AddRockComponent } from './inventories/add-rock/add-rock.component';
+import { AddFournisseurComponent } from './network/add-fournisseur/add-fournisseur.component';
+import { UpdateFournisseurComponent } from './network/update-fournisseur/update-fournisseur.component';
 
 const routes: Routes = [
   {path : 'login', component: LoginComponent},
@@ -27,7 +33,13 @@ const routes: Routes = [
   {path: 'dcg', component: DcgComponent},
   {path: 'admin', component: AdminComponent},
   {path: 'ajouterutilisateur', component: AjouterutilisateurComponent},
-  {path: 'update/:username',component:UpdateComponent}
+  {path: 'update/:username',component:UpdateComponent},
+  {path: 'add-servor',component:AddServorComponent},
+  {path: 'update-servor/:id',component:UpdateServorComponent},
+  {path: 'add-rock',component:AddRockComponent},
+  {path: 'update-rack/:id',component:UpdateRackComponent},
+  {path : 'add-fournisseur',component:AddFournisseurComponent},
+  {path: 'update-fournisseur/:id',component:UpdateFournisseurComponent}
 ];
 
 @NgModule({

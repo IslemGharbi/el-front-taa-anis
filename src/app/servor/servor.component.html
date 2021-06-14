@@ -156,3 +156,74 @@ TT DC
         </div>
       </nav>
       <!-- End Navbar -->
+      <div class="content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header card-header-primary">
+                  <h4 class="card-title ">Gestion des serveurs</h4>
+
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table class="table">
+                      <thead  class=" text-primary">
+                        <th>
+                          ID
+                        </th>
+                        <th>
+                          IP
+                        </th>
+                        <th>
+                          Nom
+                        </th>
+                        <th>
+                        Model
+                        </th>
+                        <th>
+                          Hostname
+                        </th>
+                        <th>
+                          Type
+                        </th>
+
+                      </thead>
+                      <tbody *ngFor=" let servor of servors | searsh :textBus : 'username' ; let i = index" >
+                        <tr>
+                          <td>
+                            {{servor.id}}
+                          </td>
+                          <td>
+                           {{servor.ip}}
+                          </td>
+                          <td>
+                           {{servor.name}}
+                          </td>
+                          <td>
+                            {{servor.model}}
+                          </td>
+                          <td>
+                            {{servor.hostname}}
+                          </td>
+                          <td>
+                            {{servor.type}}
+                          </td>
+                          <td>
+                          <span  (click)="deleteUser(servor.id)" (click)="delete(i)"class="material-icons">
+                            person_remove
+                            </span></td>
+                            <td>
+                            <span (click)="modify(servor.id)" class="material-icons">
+                              update
+                              </span></td>
+
+                      </tbody>
+                    </table>
+                    <a  href="./add-servor">
+                    <button  class="btn btn-primary pull-right">Ajouter Un serveur</button></a>
+                  </div>
+                </div>
+              </div>
+
+            </div>

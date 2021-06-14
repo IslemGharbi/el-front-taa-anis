@@ -15,7 +15,7 @@ TT DC
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   <!-- CSS Files -->
-  <link href="inventories.component.css" rel="stylesheet" />
+  <link href="update-fournisseur.component.css" rel="stylesheet" />
 </head>
 
 <body class="">
@@ -37,7 +37,7 @@ TT DC
               <p>Dashboard</p>
             </a>
           </li>
-          <li class="nav-item ">
+          <li class="nav-item active ">
             <a href="./admin" class="nav-link" >
               <i class="material-icons"> manage_accounts </i>
               <p>Gestion des utilisateurs</p>
@@ -49,7 +49,7 @@ TT DC
               <p>DC Guide</p>
             </a>
           </li>
-          <li class="nav-item active ">
+          <li class="nav-item ">
             <a href="./inventories" class="nav-link" >
               <i class="material-icons">library_books</i>
               <p>Inventaire</p>
@@ -155,59 +155,50 @@ TT DC
           </div>
         </div>
       </nav>
-      <!-- End Navbar -->
+
+
       <div class="content">
         <div class="container-fluid">
           <div class="row">
-            <div class="col-md-12">
+
               <div class="card">
                 <div class="card-header card-header-primary">
-                  <h4 class="card-title ">Gestion des Racks</h4>
-
+                  <h4 class="card-title">Modifier un Fournisseur</h4>
+                  <p class="card-category">Modifier votre fournisseur</p>
                 </div>
                 <div class="card-body">
-                  <div class="table-responsive">
-                    <table class="table">
-                      <thead  class=" text-primary">
-                        <th>
-                          ID
-                        </th>
-                        <th>
-                          Nom
-                        </th>
-                        <th>
-                          Position
-                        </th>
+
+                    <div class="row">
+
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Nom</label>
+                          <input type="text"  [(ngModel)]="four.name"class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating"> Num TEL</label>
+                          <input type="text"  [(ngModel)]="four.tel" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating"> Email</label>
+                          <input type="text"  [(ngModel)]="four.email" class="form-control">
+                        </div>
+                      </div>
+                    </div>
 
 
-                      </thead>
-                      <tbody *ngFor=" let rack of racks ; let i = index" >
-                        <tr>
-                          <td>
-                            {{rack.id}}
-                          </td>
-                          <td>
-                           {{rack.name}}
-                          </td>
-                          <td>
-                           {{rack.position}}
-                          </td>
 
-                          <td>
-                          <span  (click)="deleteUser(rack.id)" (click)="delete(i)"class="material-icons">
-                            person_remove
-                            </span></td>
-                            <td>
-                            <span (click)="modify(rack.id)" class="material-icons">
-                              update
-                              </span></td>
 
-                      </tbody>
-                    </table>
-                    <a  href="./add-rock">
-                    <button  class="btn btn-primary pull-right">Ajouter Un Rack</button></a>
-                  </div>
+
+
+
+                    <button  (click)="modify()"   class="btn btn-primary pull-right">Modifier le fournisseur</button>
+                    <div class="clearfix"></div>
+
                 </div>
               </div>
-
             </div>

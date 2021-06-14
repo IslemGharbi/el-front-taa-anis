@@ -20,6 +20,12 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { AjouterutilisateurComponent } from './admin/ajouterutilisateur/ajouterutilisateur.component';
 import { UpdateComponent } from './admin/update/update.component';
 import { PipeModule } from './pipe/pipe.module';
+import { AddServorComponent } from './servor/add-servor/add-servor.component';
+import { UpdateServorComponent } from './servor/update-servor/update-servor.component';
+import { AddRockComponent } from './inventories/add-rock/add-rock.component';
+import { UpdateRackComponent } from './inventories/update-rack/update-rack.component';
+import { AddFournisseurComponent } from './network/add-fournisseur/add-fournisseur.component';
+import { UpdateFournisseurComponent } from './network/update-fournisseur/update-fournisseur.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +43,12 @@ import { PipeModule } from './pipe/pipe.module';
     NavbarComponent,
     AjouterutilisateurComponent,
     UpdateComponent,
+    AddServorComponent,
+    UpdateServorComponent,
+    AddRockComponent,
+    UpdateRackComponent,
+    AddFournisseurComponent,
+    UpdateFournisseurComponent,
 
   ],
   imports: [
