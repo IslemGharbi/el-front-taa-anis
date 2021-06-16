@@ -42,71 +42,71 @@ export class APIService {
 
   //crud servor
   getServor(){
-    return this.http.get('http://localhost:8080/servor')
+    return this.http.get('http://localhost:8090/servor')
   }
   updateServor(id:any,user:any){
 
-   return this.http.put('http://localhost:8080/servor/'+id,user)
+   return this.http.put('http://localhost:8090/servor/'+id,user)
   }
 
   addServor(user:any){
-    return this.http.post('http://localhost:8080/servor',user)
+    return this.http.post('http://localhost:8090/servor',user)
   }
 
 
   deleteServor(id:any){
 
-    return this.http.delete('http://localhost:8080/servor/'+id)
+    return this.http.delete('http://localhost:8090/servor/'+id)
   }
 
   servorDetails(id:any){
 
-    return this.http.get('http://localhost:8080/servor/'+id)
+    return this.http.get('http://localhost:8090/servor/'+id)
   }
 //crud servor
 getRack(){
-  return this.http.get('http://localhost:8080/rack')
+  return this.http.get('http://localhost:8090/rack')
 }
 updateRack(id:any,user:any){
 
- return this.http.put('http://localhost:8080/rack/'+id,user)
+ return this.http.put('http://localhost:8090/rack/'+id,user)
 }
 
 addRack(user:any){
-  return this.http.post('http://localhost:8080/rack',user)
+  return this.http.post('http://localhost:8090/rack',user)
 }
 
 
 deleteRack(id:any){
 
-  return this.http.delete('http://localhost:8080/rack/'+id)
+  return this.http.delete('http://localhost:8090/rack/'+id)
 }
 
 rackDetails(id:any){
 
-  return this.http.get('http://localhost:8080/rack/'+id)
+  return this.http.get('http://localhost:8090/rack/'+id)
 }
 //CRUD fournisseur
 getFour(){
-  return this.http.get('http://localhost:8080/support')
+  return this.http.get('http://localhost:8090/support')
 }
 updateFour(id:any,user:any){
 
- return this.http.put('http://localhost:8080/support/'+id,user)
+ return this.http.put('http://localhost:8090/support/'+id,user)
 }
 
 addFour(user:any){
-  return this.http.post('http://localhost:8080/support',user)
+  return this.http.post('http://localhost:8090/support',user)
 }
 
 
 deleteFour(id:any){
 
-  return this.http.delete('http://localhost:8080/support/'+id)
+  return this.http.delete('http://localhost:8090/support/'+id)
 }
 
 FourDetails(id:any){
 
-  return this.http.get('http://localhost:8080/support/'+id)
+  return this.http.get('http://localhost:8090/support/'+id)
 }
 }

@@ -26,6 +26,8 @@ import { AddRockComponent } from './inventories/add-rock/add-rock.component';
 import { UpdateRackComponent } from './inventories/update-rack/update-rack.component';
 import { AddFournisseurComponent } from './network/add-fournisseur/add-fournisseur.component';
 import { UpdateFournisseurComponent } from './network/update-fournisseur/update-fournisseur.component';
+import { TestSideBArComponent } from './test-side-bar/test-side-bar.component';
+import { DetailsComponent } from './servor/details/details.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +51,8 @@ import { UpdateFournisseurComponent } from './network/update-fournisseur/update-
     UpdateRackComponent,
     AddFournisseurComponent,
     UpdateFournisseurComponent,
+    TestSideBArComponent,
+    DetailsComponent,
 
   ],
   imports: [

@@ -1,206 +1,142 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
 
-<head>
-  <meta charset="utf-8" />
-  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
-  <link rel="icon" type="image/png" href="../assets/img/favicon.png">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <title>
-TT DC
-  </title>
-  <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
-  <!--     Fonts and icons     -->
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
-  <!-- CSS Files -->
-  <link href="update.component.css" rel="stylesheet" />
-</head>
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="sidebar">
+    <div class="logo_content">
+      <div class="logo">
+        <div class="logo_name">Tunisie Telecom
+            <img src="assets\img\logo-tt.svg" width="100px" height="100px" >
 
-<body class="">
-  <div class="wrapper ">
-    <div class="sidebar" data-color="purple" data-background-color="white" data-image="../assets/img/sidebar-1.jpg">
-      <!--
-        Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
-
-        Tip 2: you can also add an image using data-image tag
-    -->
-      <div class="logo"><a href="https://www.tunisietelecom.tn/Fr" class="simple-text logo-normal">
-        <img src="./assets/Tunisie-Telecom.jpg">
-        </a></div>
-      <div class="sidebar-wrapper">
-        <ul class="nav">
-          <li class="nav-item">
-            <a  href="./home" class="nav-link">
-              <i class="material-icons">dashboard</i>
-              <p>Dashboard</p>
-            </a>
-          </li>
-          <li class="nav-item active ">
-            <a href="./admin" class="nav-link" >
-              <i class="material-icons"> manage_accounts </i>
-              <p>Gestion des utilisateurs</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="./dcg" class="nav-link" >
-              <i class="material-icons">content_paste</i>
-              <p>DC Guide</p>
-            </a>
-          </li>
-          <li class="nav-item ">
-            <a href="./inventories" class="nav-link" >
-              <i class="material-icons">library_books</i>
-              <p>Inventaire</p>
-            </a>
-          </li>
-          <li class="nav-item ">
-            <a href="./network" class="nav-link" >
-              <i class="material-icons"> settings_input_antenna </i>
-              <p>Réseaux</p>
-            </a>
-          </li>
-          <li class="nav-item ">
-            <a href="./servor" class="nav-link" >
-              <i class="material-icons">dns</i>
-              <p>Serveur</p>
-            </a>
-          </li>
-          <li class="nav-item ">
-            <a href="./vservor" class="nav-link" >
-              <i class="material-icons">notifications</i>
-              <p>Serveur Virtuel</p>
-            </a>
-          </li>
-          <li class="nav-item ">
-            <a href="./managment" class="nav-link">
-              <i class="material-icons"> settings_remote </i>
-              <p>Managment</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="./mapping" class="nav-link" >
-              <i class="material-icons">location_on</i>
-              <p>Mapping</p>
-            </a>
-          </li>
-        </ul>
       </div>
+      </div>
+      <i (click)="function()" class='bx bx-menu' id="btn" ></i>
+
+
     </div>
-    <div class="main-panel">
-      <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
-        <div class="container-fluid">
-          <div class="navbar-wrapper">
-            <a class="navbar-brand" href="javascript:;">Dashboard</a>
-          </div>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="navbar-toggler-icon icon-bar"></span>
-            <span class="navbar-toggler-icon icon-bar"></span>
-            <span class="navbar-toggler-icon icon-bar"></span>
-          </button>
-          <div class="collapse navbar-collapse justify-content-end">
-            <form class="navbar-form">
-              <div class="input-group no-border">
-                <input type="text" value="" class="form-control" placeholder="Search...">
-                <button type="submit" class="btn btn-white btn-round btn-just-icon">
-                  <i class="material-icons">search</i>
-                  <div class="ripple-container"></div>
-                </button>
-              </div>
-            </form>
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="javascript:;">
-                  <i class="material-icons">dashboard</i>
-                  <p class="d-lg-none d-md-block">
-                    Stats
-                  </p>
-                </a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i class="material-icons">notifications</i>
-                  <span class="notification">5</span>
-                  <p class="d-lg-none d-md-block">
-                    Some Actions
-                  </p>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="#">Mike John responded to your email</a>
-                  <a class="dropdown-item" href="#">You have 5 new tasks</a>
-                  <a class="dropdown-item" href="#">You're now friend with Andrew</a>
-                  <a class="dropdown-item" href="#">Another Notification</a>
-                  <a class="dropdown-item" href="#">Another One</a>
-                </div>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link" href="javascript:;" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i class="material-icons">person</i>
-                  <p class="d-lg-none d-md-block">
-                    Account
-                  </p>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                  <a class="dropdown-item" href="#">Profile</a>
-                  <a class="dropdown-item" href="#">Settings</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item">
-                   Log out</a>
-                </div>
-              </li>
-            </ul>
+    <ul class="nav_list">
+      <li></li>
+    <li>
+      <a href="#">
+        <i><img src="assets\img\dashboard.png" ></i>
+        <span class="links_name">Dashboard</span>
+      </a>
+
+      <span class="tooltip">Dashboard</span>
+    </li>
+    <li>
+      <a href="admin">
+          <i><img src="assets\img\settings.png" ></i>
+        <span class="links_name">Gestion d'utilisateur</span>
+      </a>
+      <span class="tooltip">User</span>
+    </li>
+    <li>
+      <a href="#">
+          <i><img src="assets\img\datacenter.png" ></i>
+        <span class="links_name">DC Index</span>
+      </a>
+      <span class="tooltip">Index</span>
+    </li>
+    <li>
+      <a href="inventories">
+        <i><img src="assets\img\Rack.png" ></i>
+        <span class="links_name">Rack</span>
+      </a>
+      <span class="tooltip">Rack</span>
+    </li>
+    <li>
+      <a href="#">
+       <i><img src="assets\img\global-network.png" ></i>
+        <span class="links_name">Composant Réseaux</span>
+      </a>
+      <span class="tooltip">Network</span>
+    </li>
+
+    <li>
+      <a href="#">
+        <i><img src="assets\img\server.png" ></i>
+        <span class="links_name">Tout Les Serveurs</span>
+      </a>
+      <span class="tooltip">Servers</span>
+    </li>
+    <li>
+      <a href="#">
+        <i><img src="assets\img\deal.png" ></i>
+        <span class="links_name">Fournisseur</span>
+      </a>
+      <span class="tooltip">Fournisseur</span>
+    </li>
+    <li>
+      <a href="#">
+        <i><img src="assets\img\map.png" ></i>
+        <span class="links_name">Mapping</span>
+      </a>
+      <span class="tooltip">Map</span>
+    </li>
+  </ul>
+  <div class="profile_content">
+    <div class="profile">
+      <div class="profile_details">
+        <!--<img src="profile.jpg" alt="">-->
+        <div class="name_job">
+          <div class="name">Prem Shahi</div>
+          <div class="job">Web Designer</div>
+        </div>
+      </div>
+      <i class='bx bx-log-out' id="log_out" ></i>
+    </div>
+  </div>
+  </div>
+
+  <div class="home_content">
+    <br>
+    <div style="padding : 40px;">
+
+    <div class="card text-center" style="width: 80rem;padding : 10px" >
+
+      <div class="card-header">
+      <b> Gestion des utilisateurs</b>
+
+      </div>
+      <div class="card-body">
+        <div class="input-group mb-3">
+
+          <input type="text" class="form-control" [(ngModel)]="user.username" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Email"  [(ngModel)]="user.email" aria-label="Email" aria-describedby="basic-addon2">
+          <div class="input-group-append">
+            <span class="input-group-text" id="basic-addon2">@example.com</span>
           </div>
         </div>
-      </nav>
+        <label>
+          <input type = 'checkbox'>
+          <span></span>
+          <i class="indicator"></i>
+        </label>
 
 
-      <div class="content">
-        <div class="container-fluid">
-          <div class="row">
-
-              <div class="card">
-                <div class="card-header card-header-primary">
-                  <h4 class="card-title">Modifier utilisateur</h4>
-                  <p class="card-category">Modifier votre utilisateur</p>
-                </div>
-                <div class="card-body">
-
-                    <div class="row">
-
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Username</label>
-                          <input type="text" name="username" [(ngModel)]="user.username"class="form-control">
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Email address</label>
-                          <input type="email" name="email" [(ngModel)]="user.email" class="form-control">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Etat</label>
-                          <input type="password" name="password" class="form-control">
-                        </div>
-                      </div>
-
-                    </div>
+        <button type="button" (click)="modify()"  class="btn btn-primary btn-lg btn-block">Modifier l'utilisateur  <img src="assets/img/add.png" ></button>
 
 
 
 
 
 
-                    <button  (click)="modify()"   class="btn btn-primary pull-right">Modifier Utilisateur</button>
-                    <div class="clearfix"></div>
+
+
+
 
                 </div>
               </div>
             </div>
+        </div>

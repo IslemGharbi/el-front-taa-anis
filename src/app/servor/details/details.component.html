@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="sidebar">
+    <div class="logo_content">
+      <div class="logo">
+        <div class="logo_name">Tunisie Telecom
+            <img src="assets\img\logo-tt.svg" width="100px" height="100px" >
+
+      </div>
+      </div>
+      <i (click)="function()" class='bx bx-menu' id="btn" ></i>
+
+
+    </div>
+    <ul class="nav_list">
+      <li></li>
+    <li>
+      <a href="#">
+        <i><img src="assets\img\dashboard.png" ></i>
+        <span class="links_name">Dashboard</span>
+      </a>
+
+      <span class="tooltip">Dashboard</span>
+    </li>
+    <li>
+      <a href="admin">
+          <i><img src="assets\img\settings.png" ></i>
+        <span class="links_name">Gestion d'utilisateur</span>
+      </a>
+      <span class="tooltip">User</span>
+    </li>
+    <li>
+      <a href="#">
+          <i><img src="assets\img\datacenter.png" ></i>
+        <span class="links_name">DC Index</span>
+      </a>
+      <span class="tooltip">Index</span>
+    </li>
+    <li>
+      <a href="inventories">
+        <i><img src="assets\img\Rack.png" ></i>
+        <span class="links_name">Rack</span>
+      </a>
+      <span class="tooltip">Rack</span>
+    </li>
+    <li>
+      <a href="#">
+       <i><img src="assets\img\global-network.png" ></i>
+        <span class="links_name">Composant Réseaux</span>
+      </a>
+      <span class="tooltip">Network</span>
+    </li>
+
+    <li>
+      <a href="#">
+        <i><img src="assets\img\server.png" ></i>
+        <span class="links_name">Tout Les Serveurs</span>
+      </a>
+      <span class="tooltip">Servers</span>
+    </li>
+    <li>
+      <a href="#">
+        <i><img src="assets\img\deal.png" ></i>
+        <span class="links_name">Fournisseur</span>
+      </a>
+      <span class="tooltip">Fournisseur</span>
+    </li>
+    <li>
+      <a href="#">
+        <i><img src="assets\img\map.png" ></i>
+        <span class="links_name">Mapping</span>
+      </a>
+      <span class="tooltip">Map</span>
+    </li>
+  </ul>
+  <div class="profile_content">
+    <div class="profile">
+      <div class="profile_details">
+        <!--<img src="profile.jpg" alt="">-->
+        <div class="name_job">
+          <div class="name">Prem Shahi</div>
+          <div class="job">Web Designer</div>
+        </div>
+      </div>
+      <i class='bx bx-log-out' id="log_out" ></i>
+    </div>
+  </div>
+  </div>
+
+
+
+<div class="home_content">
+
+  <br>
+  <div style="padding : 40px;">
+
+  <div class="card text-center" style="width: 80rem;padding : 10px" >
+
+    <div class="card-header">
+    <b> details du serveur</b>
+
+    </div>
+
+    <div class="card-body">
+
+      <ul class="list-group">
+        <li class="list-group-item"><b>ID :</b> {{servor.id}}</li>
+        <li class="list-group-item"><b >IP :</b>  {{servor.ip}}</li>
+        <li class="list-group-item"><b >Nom :</b>  {{servor.name}}</li>
+        <li class="list-group-item"><b >Type :</b>  {{servor.type}}</li>
+        <li class="list-group-item"><b >hostname :</b>  {{servor.hostname}}</li>
+        <li class="list-group-item"><b >Model :</b>  {{servor.model}}</li>
+        <li class="list-group-item"><b >System d'exploitation :</b>  {{servor.os}}</li>
+        <li class="list-group-item"><b >Reference processeur :</b>  {{servor.ref_proc}}</li>
+        <li class="list-group-item"><b >capacité processeur :</b>  {{servor.cap_proc}}</li>
+        <li class="list-group-item"><b >login SSH :</b>  {{servor.username_ssh}}</li>
+        <li class="list-group-item"><b >mot de passe SSH :</b>  {{servor.password_ssh}}</li>
+        <li class="list-group-item"><b >Consomation du memoire :</b>  {{servor.consomation_mem}}</li>
+        <li class="list-group-item"><b >Consomation processeur :</b>  {{servor.consomation_cpu}}</li>
+      </ul>

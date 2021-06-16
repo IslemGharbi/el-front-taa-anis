@@ -19,6 +19,8 @@ import { UpdateRackComponent } from './inventories/update-rack/update-rack.compo
 import { AddRockComponent } from './inventories/add-rock/add-rock.component';
 import { AddFournisseurComponent } from './network/add-fournisseur/add-fournisseur.component';
 import { UpdateFournisseurComponent } from './network/update-fournisseur/update-fournisseur.component';
+import { TestSideBArComponent } from './test-side-bar/test-side-bar.component';
+import { DetailsComponent } from './servor/details/details.component';
 
 const routes: Routes = [
   {path : 'login', component: LoginComponent},
@@ -39,7 +41,9 @@ const routes: Routes = [
   {path: 'add-rock',component:AddRockComponent},
   {path: 'update-rack/:id',component:UpdateRackComponent},
   {path : 'add-fournisseur',component:AddFournisseurComponent},
-  {path: 'update-fournisseur/:id',component:UpdateFournisseurComponent}
+  {path: 'update-fournisseur/:id',component:UpdateFournisseurComponent},
+  {path: 'test',component:TestSideBArComponent },
+  {path :'details/:id',component:DetailsComponent}
 ];
 
 @NgModule({
