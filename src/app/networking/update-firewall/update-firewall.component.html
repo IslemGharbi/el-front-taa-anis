@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <!-- Created By CodingLab - www.codinglabweb.com -->
 <html lang="en" dir="ltr">
@@ -101,60 +102,48 @@
 <div class="home_content">
 
 
-  <h1>Gestion des fournisseurs </h1>
-  <hr>
+  <br>
+  <div style="padding : 40px;">
 
-  <table>
-    <tr id="header">
+  <div class="card text-center" style="width: 80rem;padding : 10px" >
 
+    <div class="card-header">
+    <b> Modifier un Firewall</b>
 
-                        <th>
-                          ID
-                        </th>
-                        <th>
-                          Nom
-                        </th>
-                        <th>
-                          Num TEL
-                        </th>
-                        <th>
-                          Email
-                        </th>
-                        <th>
-                          Supprimer
-                        </th>
-                        <th>
-                          Modifier
-                        </th>
+    </div>
+    <div class="card-body">
+      <div class="input-group mb-3">
 
+        <input type="number" class="form-control" [(ngModel)]="firewall.id" placeholder="ID" aria-label="ID" aria-describedby="basic-addon1">
+      </div>
+      <div class="input-group mb-3">
 
+        <input type="text" class="form-control" [(ngModel)]="firewall.name" placeholder="Nom" aria-label="Nom" aria-describedby="basic-addon1">
+      </div>
+      <div class="input-group mb-3">
 
+        <input type="text" class="form-control" [(ngModel)]="firewall.categorie" placeholder="categorie" aria-label="categorie" aria-describedby="basic-addon1">
+      </div>
+      <div class="input-group mb-3">
 
-                        <tr *ngFor=" let fournisseur of fournisseurs ; let i = index">
-                          <td>
-                            {{fournisseur.id}}
-                          </td>
-                          <td>
-                           {{fournisseur.name}}
-                          </td>
-                          <td>
-                           {{fournisseur.tel}}
-                          </td>
-                          <td>
-                            {{fournisseur.email}}
-                          </td>
+        <input type="text" class="form-control" [(ngModel)]="firewall.dispo" placeholder="disponabilité" aria-label="disponabilité" aria-describedby="basic-addon1">
+      </div>
+      <div class="input-group mb-3">
 
-                          <td>
-                          <img  (click)="deleteUser(fournisseur.id)" (click)="delete(i)" src="assets/img/x-button.png">
-
-                         </td>
-                            <td>
-                            <img (click)="modify(fournisseur.id)" src="assets/img/captcha.png">
-                              update
-                           </td>
+        <input type="text" class="form-control" [(ngModel)]="firewall.type" placeholder="type" aria-label="type" aria-describedby="basic-addon1">
+      </div>
 
 
-                    </table>
-                    <a  href="./add-fournisseur">
-                    <button  class="btn btn-primary pull-right">Ajouter Un fournisseur</button></a>
-                  </div>
+
+
+
+
+
+
+
+                    <button  (click)="modify()"   class="btn btn-primary pull-right">Modifier le firewall </button>
+                    <div class="clearfix"></div>
+
+                </div>
+              </div>
+            </div>

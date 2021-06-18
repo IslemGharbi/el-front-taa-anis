@@ -28,6 +28,15 @@ import { AddFournisseurComponent } from './network/add-fournisseur/add-fournisse
 import { UpdateFournisseurComponent } from './network/update-fournisseur/update-fournisseur.component';
 import { TestSideBArComponent } from './test-side-bar/test-side-bar.component';
 import { DetailsComponent } from './servor/details/details.component';
+import { NetworkingComponent } from './networking/networking.component';
+import { AddSwitchComponent } from './networking/add-switch/add-switch.component';
+import { AddRouterComponent } from './networking/add-router/add-router.component';
+import { AddFirewallComponent } from './networking/add-firewall/add-firewall.component';
+import { UpdateRouterComponent } from './networking/update-router/update-router.component';
+import { UpdateSwitchComponent } from './networking/update-switch/update-switch.component';
+import { UpdateFirewallComponent } from './networking/update-firewall/update-firewall.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 @NgModule({
   declarations: [
@@ -53,10 +62,20 @@ import { DetailsComponent } from './servor/details/details.component';
     UpdateFournisseurComponent,
     TestSideBArComponent,
     DetailsComponent,
+    NetworkingComponent,
+    AddSwitchComponent,
+    AddRouterComponent,
+    AddFirewallComponent,
+    UpdateRouterComponent,
+    UpdateSwitchComponent,
+    UpdateFirewallComponent,
+
 
   ],
   imports: [
     HttpClientModule,
+    NgxChartsModule,
+  BrowserAnimationsModule,
     BrowserModule,
     AppRoutingModule,
     PipeModule,

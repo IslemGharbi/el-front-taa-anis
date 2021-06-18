@@ -3,14 +3,14 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { APIService } from 'src/app/services/api.service';
 
 @Component({
-  selector: 'app-update-rack',
-  templateUrl: './update-rack.component.html',
-  styleUrls: ['./update-rack.component.css']
+  selector: 'app-update-firewall',
+  templateUrl: './update-firewall.component.html',
+  styleUrls: ['./update-firewall.component.css']
 })
-export class UpdateRackComponent implements OnInit {
+export class UpdateFirewallComponent implements OnInit {
 
   id:any
-  rack:any={}
+  firewall:any={}
     constructor(
       private route : ActivatedRoute,
       private service : APIService,
@@ -19,14 +19,14 @@ export class UpdateRackComponent implements OnInit {
 
     ngOnInit(): void {
       this.id = this.route.snapshot.params['id'];
-      this.service.rackDetails(this.id).subscribe(data =>
+      this.service.FirewallsDetails(this.id).subscribe(data =>
 
-        this.rack=data,
+        this.firewall=data,
       )
     }
   modify(){
-  this.service.updateRack(this.id,this.rack).subscribe(
-    data =>{this.rack=data,this.router.navigate(['inventories'])}
+  this.service.updateFirewalls(this.id,this.firewall).subscribe(
+    data =>{this.firewall=data,this.router.navigate(['inventories'])}
   )
   }
   function(){

@@ -3,13 +3,13 @@ import { Router } from '@angular/router';
 import { APIService } from 'src/app/services/api.service';
 
 @Component({
-  selector: 'app-add-fournisseur',
-  templateUrl: './add-fournisseur.component.html',
-  styleUrls: ['./add-fournisseur.component.css']
+  selector: 'app-add-switch',
+  templateUrl: './add-switch.component.html',
+  styleUrls: ['./add-switch.component.css']
 })
-export class AddFournisseurComponent implements OnInit {
+export class AddSwitchComponent implements OnInit {
 
-  fournisseur:any={}
+  switch:any={}
   constructor(
     private service : APIService,
     private router : Router
@@ -20,7 +20,7 @@ export class AddFournisseurComponent implements OnInit {
   }
   ajouter(){
 
-    this.service.addFour(this.fournisseur).subscribe(
+    this.service.addSwitch(this.switch).subscribe(
       data => {
   this.navigate()
       },
@@ -31,9 +31,8 @@ export class AddFournisseurComponent implements OnInit {
 
   }
   navigate(){
-    this.router.navigate(['network'])
+    this.router.navigate(['composantreseau'])
   }
-
   function(){
     let btn:any = document.querySelector("#btn");
     let sidebar:any = document.querySelector(".sidebar");
@@ -47,5 +46,4 @@ export class AddFournisseurComponent implements OnInit {
         btn.classList.replace("bx-menu-alt-right", "bx-menu");
     }
   }
-
 }

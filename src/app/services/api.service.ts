@@ -109,4 +109,79 @@ FourDetails(id:any){
 
   return this.http.get('http://localhost:8090/support/'+id)
 }
+
+//CRUD router
+
+getRouter(){
+  return this.http.get('http://localhost:8090/router')
+}
+updateRouter(id:any,user:any){
+
+ return this.http.put('http://localhost:8090/router/'+id,user)
+}
+
+addRouter(user:any){
+  return this.http.post('http://localhost:8090/router',user)
+}
+
+
+deleteRouter(id:any){
+
+  return this.http.delete('http://localhost:8090/router/'+id)
+}
+
+RouterDetails(id:any){
+
+  return this.http.get('http://localhost:8090/router/'+id)
+}
+
+// crud switch
+
+getSwitch(){
+  return this.http.get('http://localhost:8090/switch')
+}
+updateSwitch(id:any,user:any){
+
+ return this.http.put('http://localhost:8090/switch/'+id,user)
+}
+
+addSwitch(user:any){
+  return this.http.post('http://localhost:8090/switch',user)
+}
+
+
+deleteSwitch(id:any){
+
+  return this.http.delete('http://localhost:8090/switch/'+id)
+}
+
+SwitchDetails(id:any){
+
+  return this.http.get('http://localhost:8090/switch/'+id)
+}
+// crud firewalls
+
+getFirewalls(){
+  return this.http.get('http://localhost:8090/firewalls')
+}
+updateFirewalls(id:any,user:any){
+
+ return this.http.put('http://localhost:8090/firewalls/'+id,user)
+}
+
+addFirewalls(user:any){
+  return this.http.post('http://localhost:8090/firewalls',user)
+}
+
+
+deleteFirewalls(id:any){
+
+  return this.http.delete('http://localhost:8090/firewalls/'+id)
+}
+
+FirewallsDetails(id:any){
+
+  return this.http.get('http://localhost:8090/firewalls/'+id)
+}
+
 }

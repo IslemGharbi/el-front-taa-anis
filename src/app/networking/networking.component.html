@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="sidebar">
+    <div class="logo_content">
+      <div class="logo">
+        <div class="logo_name">Tunisie Telecom
+            <img src="assets\img\logo-tt.svg" width="100px" height="100px" >
+
+      </div>
+      </div>
+      <i (click)="function()" class='bx bx-menu' id="btn" ></i>
+
+
+    </div>
+    <ul class="nav_list">
+      <li></li>
+    <li>
+      <a href="#">
+        <i><img src="assets\img\dashboard.png" ></i>
+        <span class="links_name">Dashboard</span>
+      </a>
+
+      <span class="tooltip">Dashboard</span>
+    </li>
+    <li>
+      <a href="admin">
+          <i><img src="assets\img\settings.png" ></i>
+        <span class="links_name">Gestion d'utilisateur</span>
+      </a>
+      <span class="tooltip">User</span>
+    </li>
+    <li>
+      <a href="#">
+          <i><img src="assets\img\datacenter.png" ></i>
+        <span class="links_name">DC Index</span>
+      </a>
+      <span class="tooltip">Index</span>
+    </li>
+    <li>
+      <a href="inventories">
+        <i><img src="assets\img\Rack.png" ></i>
+        <span class="links_name">Rack</span>
+      </a>
+      <span class="tooltip">Rack</span>
+    </li>
+    <li>
+      <a href="composantreseau">
+       <i><img src="assets\img\global-network.png" ></i>
+        <span class="links_name">Composant Réseaux</span>
+      </a>
+      <span class="tooltip">Network</span>
+    </li>
+
+    <li>
+      <a href="#">
+        <i><img src="assets\img\server.png" ></i>
+        <span class="links_name">Tout Les Serveurs</span>
+      </a>
+      <span class="tooltip">Servers</span>
+    </li>
+    <li>
+      <a href="#">
+        <i><img src="assets\img\deal.png" ></i>
+        <span class="links_name">Fournisseur</span>
+      </a>
+      <span class="tooltip">Fournisseur</span>
+    </li>
+    <li>
+      <a href="#">
+        <i><img src="assets\img\map.png" ></i>
+        <span class="links_name">Mapping</span>
+      </a>
+      <span class="tooltip">Map</span>
+    </li>
+  </ul>
+  <div class="profile_content">
+    <div class="profile">
+      <div class="profile_details">
+        <!--<img src="profile.jpg" alt="">-->
+        <div class="name_job">
+          <div class="name">Prem Shahi</div>
+          <div class="job">Web Designer</div>
+        </div>
+      </div>
+      <i class='bx bx-log-out' id="log_out" ></i>
+    </div>
+  </div>
+  </div>
+
+
+
+<div class="home_content">
+  <h1>Composant réseau </h1>
+  <hr>
+  <br>
+
+<div class="row">
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
+        <h1>Gestion router </h1>
+        <hr><br>
+        <table >
+          <tr id="header">
+                  <th >ID</th>
+                  <th >Nom</th>
+                  <th >Port</th>
+                  <th>Model</th>
+                  <th>Supprimer</th>
+                  <th>Modifier</th>
+
+
+
+
+                </tr>
+                <tr *ngFor=" let router of routers ; let i = index">
+                  <th>{{router.id}}</th>
+                  <th>{{router.name}}</th>
+                  <th>{{router.port}}</th>
+                  <th>{{router.model}}</th>
+                  <td> <img (click)="deleteRouter(router.id)" (click)="deleteRouteri(i)" src="assets/img/x-button.png" ></td>
+                  <td> <img (click)="modifyRouter(router.id)" src="assets/img/captcha.png" ></td>
+                </tr>
+        </table>
+
+
+        <div class="container">
+          <a href="add-router">
+        <button class="btn btn2">Ajouter un router</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
+        <h1>Gestion firewalls </h1>
+        <br>
+        <table >
+          <tr id="header">
+                  <th >ID</th>
+                  <th >Nom</th>
+                  <th >Catego</th>
+                  <th>Dispo</th>
+                  <th>Type</th>
+                  <th>Supp</th>
+                  <th>Mod</th>
+
+
+
+
+                </tr>
+                <tr *ngFor=" let firewall of firewalls ; let i = index">
+                  <th>{{firewall.id}}</th>
+                  <th>{{firewall.name}}</th>
+                  <th>{{firewall.categorie}}</th>
+                  <th>{{firewall.model}}</th>
+                  <th>{{firewall.type}}</th>
+                  <td> <img (click)="deleteFirewall(firewall.id)" (click)="deleteFirewalli(i)" src="assets/img/x-button.png" ></td>
+                  <td> <img (click)="modifyFirewall(firewall.id)" src="assets/img/captcha.png" ></td>
+                </tr>
+        </table>
+
+
+        <div class="container">
+          <a href="add-firewall">
+            <button class="btn btn2">Ajouter un firewall</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
+        <h1>Gestion switcher </h1>
+        <hr>
+        <br>
+        <table >
+          <tr id="header">
+                  <th >ID</th>
+                  <th >Nom</th>
+                  <th >Type</th>
+                  <th>OS</th>
+                  <th>Port</th>
+                  <th>nb port</th>
+                  <th>Supp</th>
+                  <th>Mod</th>
+
+
+
+
+                </tr>
+                <tr *ngFor=" let switcher of switchers ; let i = index">
+                  <th>{{switcher.id}}</th>
+                  <th>{{switcher.name}}</th>
+                  <th>{{switcher.type}}</th>
+                  <th>{{switcher.os}}</th>
+                  <th>{{switcher.port}}</th>
+                  <th>{{switcher.nbr_port}}</th>
+                  <td> <img (click)="deleteSwitch(switcher.id)" (click)="deleteSwitchi(i)" src="assets/img/x-button.png" ></td>
+                  <td> <img (click)="modifySwitch(switcher.id)" src="assets/img/captcha.png" ></td>
+                </tr>
+        </table>
+        <div class="container">
+          <a href="add-switch">
+            <button class="btn btn2">Ajouter un switcher</button></a>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

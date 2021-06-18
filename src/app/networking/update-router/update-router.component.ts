@@ -3,14 +3,14 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { APIService } from 'src/app/services/api.service';
 
 @Component({
-  selector: 'app-update-rack',
-  templateUrl: './update-rack.component.html',
-  styleUrls: ['./update-rack.component.css']
+  selector: 'app-update-router',
+  templateUrl: './update-router.component.html',
+  styleUrls: ['./update-router.component.css']
 })
-export class UpdateRackComponent implements OnInit {
+export class UpdateRouterComponent implements OnInit {
 
   id:any
-  rack:any={}
+  routers:any={}
     constructor(
       private route : ActivatedRoute,
       private service : APIService,
@@ -19,14 +19,14 @@ export class UpdateRackComponent implements OnInit {
 
     ngOnInit(): void {
       this.id = this.route.snapshot.params['id'];
-      this.service.rackDetails(this.id).subscribe(data =>
+      this.service.RouterDetails(this.id).subscribe(data =>
 
-        this.rack=data,
+        this.routers=data,
       )
     }
   modify(){
-  this.service.updateRack(this.id,this.rack).subscribe(
-    data =>{this.rack=data,this.router.navigate(['inventories'])}
+  this.service.updateRouter(this.id,this.routers).subscribe(
+    data =>{this.routers=data,this.router.navigate(['composantreseau'])}
   )
   }
   function(){

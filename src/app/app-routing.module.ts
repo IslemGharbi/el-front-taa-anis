@@ -21,6 +21,10 @@ import { AddFournisseurComponent } from './network/add-fournisseur/add-fournisse
 import { UpdateFournisseurComponent } from './network/update-fournisseur/update-fournisseur.component';
 import { TestSideBArComponent } from './test-side-bar/test-side-bar.component';
 import { DetailsComponent } from './servor/details/details.component';
+import { NetworkingComponent } from './networking/networking.component';
+import { AddSwitchComponent } from './networking/add-switch/add-switch.component';
+import { AddRouterComponent } from './networking/add-router/add-router.component';
+import { AddFirewallComponent } from './networking/add-firewall/add-firewall.component';
 
 const routes: Routes = [
   {path : 'login', component: LoginComponent},
@@ -43,7 +47,12 @@ const routes: Routes = [
   {path : 'add-fournisseur',component:AddFournisseurComponent},
   {path: 'update-fournisseur/:id',component:UpdateFournisseurComponent},
   {path: 'test',component:TestSideBArComponent },
-  {path :'details/:id',component:DetailsComponent}
+  {path :'details/:id',component:DetailsComponent},
+  {path :'composantreseau',component:NetworkingComponent},
+  {path:'add-switch',component:AddSwitchComponent},
+  {path:'add-router',component:AddRouterComponent},
+  {path:'add-firewall',component:AddFirewallComponent}
+
 ];
 
 @NgModule({

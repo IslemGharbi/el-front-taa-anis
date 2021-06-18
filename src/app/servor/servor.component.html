@@ -106,23 +106,11 @@
 
 
 
-  <br>
-  <div style="padding : 40px;">
+  <h1>Gestion des serveurs </h1>
+  <hr>
 
-  <div class="card text-center" style="width: 80rem;padding : 10px" >
-
-    <div class="card-header">
-    <b> Gestion des serveurs</b>
-
-    </div>
-    <a href="./add-servor">
-      <button type="button"  class="btn btn-primary btn-lg btn-block">Ajouter un serveur  <img src="assets/img/add.png" ></button></a>
-    <div class="card-body">
-
-
-      <table class="content-table">
-        <thead >
-          <tr>
+  <table>
+    <tr id="header">
                         <th>
                           ID
                         </th>
@@ -143,9 +131,9 @@
                         </th>
 
 
-                      </thead>
-                      <tbody *ngFor=" let servor of servors; let i = index" >
-                        <tr>
+                      </tr>
+
+                        <tr *ngFor=" let servor of servors; let i = index">
                           <td>
                             {{servor.id}}
                           </td>
@@ -161,11 +149,7 @@
                             <td> <img (click)="modify(servor.id)" src="assets/img/captcha.png" ></td>
                             <td> <img (click)="detail(servor.id)"src="assets/img/details.png">      </td>
                           </tr>
-                      </tbody>
+
                     </table>
 
                   </div>
-                </div>
-              </div>
-
-            </div>
