@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { APIService } from 'src/app/services/api.service';
+import { AuthenticationService } from 'src/app/services/authentication.service';
 
 @Component({
   selector: 'app-update-switch',
@@ -14,7 +15,8 @@ export class UpdateSwitchComponent implements OnInit {
     constructor(
       private route : ActivatedRoute,
       private service : APIService,
-      private router : Router
+      private router : Router,
+      private auth : AuthenticationService
     ) { }
 
     ngOnInit(): void {
@@ -41,5 +43,8 @@ export class UpdateSwitchComponent implements OnInit {
     } else {
         btn.classList.replace("bx-menu-alt-right", "bx-menu");
     }
+  }
+  logout(){
+    this.auth.logout()
   }
   }

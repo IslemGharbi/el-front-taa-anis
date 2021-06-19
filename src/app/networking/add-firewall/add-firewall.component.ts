@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { APIService } from 'src/app/services/api.service';
+import { AuthenticationService } from 'src/app/services/authentication.service';
 
 @Component({
   selector: 'app-add-firewall',
@@ -12,7 +13,8 @@ export class AddFirewallComponent implements OnInit {
   firewall:any={}
   constructor(
     private service : APIService,
-    private router : Router
+    private router : Router,
+    private auth : AuthenticationService
 
   ) { }
 
@@ -45,5 +47,9 @@ export class AddFirewallComponent implements OnInit {
     } else {
         btn.classList.replace("bx-menu-alt-right", "bx-menu");
     }
+
+  }
+  logout(){
+    this.auth.logout()
   }
 }

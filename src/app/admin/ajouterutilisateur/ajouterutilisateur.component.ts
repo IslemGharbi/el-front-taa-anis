@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { APIService } from 'src/app/services/api.service';
+import { AuthenticationService } from 'src/app/services/authentication.service';
 
 @Component({
   selector: 'app-ajouterutilisateur',
@@ -14,6 +15,7 @@ user:any={}
     private http : HttpClient,
     private  service : APIService,
     private router : Router,
+    private auth :AuthenticationService
 
   ) { }
 
@@ -52,5 +54,7 @@ function(){
       btn.classList.replace("bx-menu-alt-right", "bx-menu");
   }
 }
-
+logout(){
+  this.auth.logout()
+}
 }

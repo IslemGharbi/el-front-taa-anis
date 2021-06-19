@@ -25,6 +25,9 @@ import { NetworkingComponent } from './networking/networking.component';
 import { AddSwitchComponent } from './networking/add-switch/add-switch.component';
 import { AddRouterComponent } from './networking/add-router/add-router.component';
 import { AddFirewallComponent } from './networking/add-firewall/add-firewall.component';
+import { UpdateSwitchComponent } from './networking/update-switch/update-switch.component';
+import { UpdateRouterComponent } from './networking/update-router/update-router.component';
+import { UpdateFirewallComponent } from './networking/update-firewall/update-firewall.component';
 
 const routes: Routes = [
   {path : 'login', component: LoginComponent},
@@ -51,7 +54,11 @@ const routes: Routes = [
   {path :'composantreseau',component:NetworkingComponent},
   {path:'add-switch',component:AddSwitchComponent},
   {path:'add-router',component:AddRouterComponent},
-  {path:'add-firewall',component:AddFirewallComponent}
+  {path:'add-firewall',component:AddFirewallComponent},
+  {path:'update-switch/:id',component:UpdateSwitchComponent},
+  {path:'update-router/:id',component: UpdateRouterComponent},
+  {path:'update-firewall/:id',component: UpdateFirewallComponent},
+  {path:'index',component:DcgComponent}
 
 ];
 

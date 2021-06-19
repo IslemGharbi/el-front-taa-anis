@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { APIService } from '../services/api.service';
+import { AuthenticationService } from '../services/authentication.service';
 
 @Component({
   selector: 'app-inventories',
@@ -11,7 +12,8 @@ export class InventoriesComponent implements OnInit {
 
   constructor(
     private service : APIService,
-    private router : Router
+    private router : Router,
+    private auth : AuthenticationService
   ) { }
 
   racks:any={}
@@ -61,5 +63,8 @@ this.textBus=event.detail.value
       } else {
           btn.classList.replace("bx-menu-alt-right", "bx-menu");
       }
+    }
+    logout(){
+      this.auth.logout()
     }
 }

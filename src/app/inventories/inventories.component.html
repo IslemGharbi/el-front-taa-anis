@@ -91,7 +91,7 @@
           <div class="job">Web Designer</div>
         </div>
       </div>
-      <i class='bx bx-log-out' id="log_out" ></i>
+      <i class='bx bx-log-out' id="log_out" (click)="logout()"></i>
     </div>
   </div>
   </div>
@@ -135,8 +135,11 @@
                           <td> <img (click)="deleteUser(rack.id)" (click)="delete(i)" src="assets/img/x-button.png" ></td>
                           <td> <img (click)="modify(rack.id)" src="assets/img/captcha.png" ></td>
                         </tr>
+                        <a  href="./add-rock">
+                          <button  class="btn btn-primary pull-right">Ajouter Un Rack</button></a>
 
                     </table>
+
 
 
 

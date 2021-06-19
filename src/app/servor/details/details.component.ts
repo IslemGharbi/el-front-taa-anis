@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { APIService } from 'src/app/services/api.service';
+import { AuthenticationService } from 'src/app/services/authentication.service';
 
 @Component({
   selector: 'app-details',
@@ -12,7 +13,8 @@ servor : any={}
 id:any
   constructor(
     private service : APIService,
-    private route : ActivatedRoute
+    private route : ActivatedRoute,
+    private auth : AuthenticationService
   ) {
 
   }
@@ -37,5 +39,7 @@ id:any
         btn.classList.replace("bx-menu-alt-right", "bx-menu");
     }
   }
-
+  logout(){
+    this.auth.logout()
+  }
 }

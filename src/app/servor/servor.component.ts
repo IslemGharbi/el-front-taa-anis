@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { APIService } from '../services/api.service';
+import { AuthenticationService } from '../services/authentication.service';
 
 @Component({
   selector: 'app-servor',
@@ -11,7 +12,8 @@ export class ServorComponent implements OnInit {
 
   constructor(
     private service : APIService,
-    private router : Router
+    private router : Router,
+    private auth : AuthenticationService
   ) { }
 
   servors:any={}
@@ -65,6 +67,9 @@ this.textBus=event.detail.value
 
     detail(id:any){
       this.router.navigate(['details',id]);
+    }
+    logout(){
+      this.auth.logout()
     }
 
 }

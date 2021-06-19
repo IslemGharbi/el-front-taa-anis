@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { APIService } from '../services/api.service';
+import { AuthenticationService } from '../services/authentication.service';
 
 @Component({
   selector: 'app-networking',
@@ -15,7 +16,8 @@ export class NetworkingComponent implements OnInit {
 
   constructor(
     private service : APIService,
-    private router : Router
+    private router : Router,
+    private auth : AuthenticationService
   ) { }
 
   ngOnInit(): void {
@@ -99,5 +101,7 @@ export class NetworkingComponent implements OnInit {
         btn.classList.replace("bx-menu-alt-right", "bx-menu");
     }
   }
-
+logout(){
+  this.auth.logout()
+}
 }

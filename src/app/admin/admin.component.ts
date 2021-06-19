@@ -13,7 +13,8 @@ export class AdminComponent implements OnInit {
   constructor(
     private router : Router,
     private service : APIService,
-    private auth : AuthenticationService
+    private auth : AuthenticationService,
+
   ) { }
   users:any={}
   textBus = '';
@@ -66,5 +67,7 @@ this.textBus=event.detail.value
           btn.classList.replace("bx-menu-alt-right", "bx-menu");
       }
     }
+    logout()
+    {this.auth.logout()}
 
 }
