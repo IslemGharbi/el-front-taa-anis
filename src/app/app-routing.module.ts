@@ -28,6 +28,7 @@ import { AddFirewallComponent } from './networking/add-firewall/add-firewall.com
 import { UpdateSwitchComponent } from './networking/update-switch/update-switch.component';
 import { UpdateRouterComponent } from './networking/update-router/update-router.component';
 import { UpdateFirewallComponent } from './networking/update-firewall/update-firewall.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
   {path : 'login', component: LoginComponent},
@@ -58,7 +59,8 @@ const routes: Routes = [
   {path:'update-switch/:id',component:UpdateSwitchComponent},
   {path:'update-router/:id',component: UpdateRouterComponent},
   {path:'update-firewall/:id',component: UpdateFirewallComponent},
-  {path:'index',component:DcgComponent}
+  {path:'index',component:DcgComponent},
+  {path : 'dashboard', component : DashboardComponent}
 
 ];
 

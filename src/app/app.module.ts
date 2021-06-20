@@ -36,7 +36,15 @@ import { UpdateRouterComponent } from './networking/update-router/update-router.
 import { UpdateSwitchComponent } from './networking/update-switch/update-switch.component';
 import { UpdateFirewallComponent } from './networking/update-firewall/update-firewall.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { DashboardComponent } from './dashboard/dashboard.component';
+
 import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { NgxEchartsModule } from 'ngx-echarts';
+
+
+
+
 
 @NgModule({
   declarations: [
@@ -69,17 +77,29 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
     UpdateRouterComponent,
     UpdateSwitchComponent,
     UpdateFirewallComponent,
+    DashboardComponent,
+
 
 
   ],
   imports: [
     HttpClientModule,
     NgxChartsModule,
-  BrowserAnimationsModule,
+
+
+    BrowserAnimationsModule,
+
+
+
+
+
     BrowserModule,
     AppRoutingModule,
     PipeModule,
     FormsModule,
+    NgxEchartsModule.forRoot({
+      echarts: () => import('echarts')
+    }),
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDvGXe-J_-JIKZABDo3m_SjXQz88sLOvZk'})
   ],

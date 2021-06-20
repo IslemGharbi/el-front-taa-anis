@@ -18,7 +18,7 @@ olog(){
   this.authservice.onlog(this.login).subscribe(Resp=>{
     let jwt:any=Resp.headers.get("Authorization");
     this.authservice.saveToken(jwt);
-    this.router.navigateByUrl("/home");
+    this.router.navigateByUrl("/dashboard");
    },err=>{
 
    }

@@ -1,11 +1,10 @@
 
 <!DOCTYPE html>
-<!-- Created By CodingLab - www.codinglabweb.com -->
+
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8">
-
-    <!-- Boxicons CDN Link -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
@@ -86,60 +85,67 @@
   <div class="profile_content">
     <div class="profile">
       <div class="profile_details">
-        <!--<img src="profile.jpg" alt="">-->
+
         <div class="name_job">
           <div class="name">Prem Shahi</div>
           <div class="job">Web Designer</div>
         </div>
       </div>
-      <i class='bx bx-log-out' id="log_out" (click)="logout()" ></i>
+      <i class='bx bx-log-out' id="log_out" (click)="logout()"></i>
     </div>
   </div>
   </div>
 
 
 
-<div class="home_content">
+  <div class="home_content">
+
+  <!-- <echarts [initOpts]="initOpts" [options]="options"></echarts>
+
+  <div class="button-groups">
+
+  </div>
+  <div echarts [options]="option"  class="demo-chart"></div> -->
+
+<br>
 
 
-  <br>
-  <div style="padding : 40px;">
 
-  <div class="card text-center" style="width: 80rem;padding : 10px" >
-
-    <div class="card-header">
-    <b> Modifier un Router</b>
-
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Nombre du composant du datacenter</h5><br>
+          <canvas id="myChart" height="120px"></canvas>
+        </div>
+      </div>
     </div>
-    <div class="card-body">
-      <div class="input-group mb-3">
-
-        <input type="number" class="form-control" [(ngModel)]="routers.id" placeholder="ID" aria-label="ID" aria-describedby="basic-addon1">
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">état du serveur </h5><br>
+          <canvas id="donut" height="120px"></canvas>
+        </div>
       </div>
-      <div class="input-group mb-3">
-
-        <input type="text" class="form-control" [(ngModel)]="routers.name" placeholder="Nom" aria-label="Nom" aria-describedby="basic-addon1">
+    </div>
+  </div>
+<br>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Comnsomation électrique du POD en HZ</h5><br>
+          <canvas id="line" height="120px"></canvas>
+        </div>
       </div>
-      <div class="input-group mb-3">
-
-        <input type="text" class="form-control" [(ngModel)]="routers.port" placeholder="port" aria-label="port" aria-describedby="basic-addon1">
+    </div>
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Temperature du serveur en C° </h5><br>
+          <canvas id="2ndLine" height="120px"></canvas>
+        </div>
       </div>
-      <div class="input-group mb-3">
-
-        <input type="text" class="form-control" [(ngModel)]="routers.model" placeholder="model" aria-label="model" aria-describedby="basic-addon1">
-      </div>
-
-
-
-
-
-
-
-
-
-                    <button  (click)="modify()"   class="btn btn-primary pull-right">Modifier le router</button>
-                    <div class="clearfix"></div>
-
-                </div>
-              </div>
-            </div>
+    </div>
+  </div>
+  </div>
