@@ -184,4 +184,30 @@ FirewallsDetails(id:any){
   return this.http.get('http://localhost:8090/firewalls/'+id)
 }
 
+//CRUD POD
+
+getpod(){
+  return this.http.get('http://localhost:8090/pod')
+}
+updatepod(id:any,user:any){
+
+ return this.http.put('http://localhost:8090/pod/'+id,user)
+}
+
+addpod(user:any){
+  return this.http.post('http://localhost:8090/pod',user)
+}
+
+
+deletepod(id:any){
+
+  return this.http.delete('http://localhost:8090/pod/'+id)
+}
+
+podDetails(id:any){
+
+  return this.http.get('http://localhost:8090/pod/'+id)
+}
+
+
 }

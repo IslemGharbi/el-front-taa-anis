@@ -29,6 +29,9 @@ import { UpdateSwitchComponent } from './networking/update-switch/update-switch.
 import { UpdateRouterComponent } from './networking/update-router/update-router.component';
 import { UpdateFirewallComponent } from './networking/update-firewall/update-firewall.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { PODComponent } from './pod/pod.component';
+import { AddProdComponent } from './pod/add-prod/add-prod.component';
+import { UpdatePodComponent } from './pod/update-pod/update-pod.component';
 
 const routes: Routes = [
   {path : 'login', component: LoginComponent},
@@ -60,7 +63,10 @@ const routes: Routes = [
   {path:'update-router/:id',component: UpdateRouterComponent},
   {path:'update-firewall/:id',component: UpdateFirewallComponent},
   {path:'index',component:DcgComponent},
-  {path : 'dashboard', component : DashboardComponent}
+  {path : 'dashboard', component : DashboardComponent},
+  {path : 'pod', component : PODComponent},
+  {path : 'add-pod', component : AddProdComponent},
+  {path : 'update-pod/:id',component : UpdatePodComponent}
 
 ];
 

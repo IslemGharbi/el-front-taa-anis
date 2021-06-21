@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <!-- Created By CodingLab - www.codinglabweb.com -->
 <html lang="en" dir="ltr">
@@ -75,7 +76,7 @@
       <span class="tooltip">Servers</span>
     </li>
     <li>
-      <a href="#">
+      <a href="network">
         <i><img src="assets\img\deal.png" ></i>
         <span class="links_name">Fournisseur</span>
       </a>
@@ -98,7 +99,7 @@
           <div class="job">Web Designer</div>
         </div>
       </div>
-      <i class='bx bx-log-out' id="log_out" (click)="logout()"></i>
+      <i class='bx bx-log-out' id="log_out" (click)="logout()" ></i>
     </div>
   </div>
   </div>
@@ -107,59 +108,45 @@
 
 <div class="home_content">
 
+  <br>
+  <div style="padding : 40px;">
 
-  <h1>Gestion des Rack </h1>
-  <hr>
-  <div class="main11">
-    <div class="input-group">
-      <input type="text" class="form-control" placeholder="Chercher les Racks">
-      <div class="input-group-append">
-        <button class="btn btn-secondary" type="button">
-          <img src="assets\img\search.png">
-        </button>
+  <div class="card text-center" style="width: 80rem;padding : 10px" >
+
+    <div class="card-header">
+    <b> Ajouter un pod</b>
+
+    </div>
+    <div class="card-body">
+      <div class="input-group mb-3">
+
+        <input type="number" class="form-control" [(ngModel)]="pod.id" placeholder="ID" aria-label="ID" aria-describedby="basic-addon1">
       </div>
-    </div></div>
+      <div class="input-group mb-3">
 
-  <table>
+        <input type="text" class="form-control" [(ngModel)]="pod.name" placeholder="Nom" aria-label="Nom" aria-describedby="basic-addon1">
+      </div>
+      <div class="input-group mb-3">
 
+        <input type="text" class="form-control" [(ngModel)]="pod.Humidite" placeholder="Humidite" aria-label="Humidite" aria-describedby="basic-addon1">
+      </div>
+      <div class="input-group mb-3">
 
-    <tr id="header">
-            <th >ID</th>
-            <th >Nom</th>
-            <th >Position</th>
-            <th>Supprimer</th>
-            <th>Modifier</th>
+        <input type="text" class="form-control" [(ngModel)]="pod.temperature" placeholder="temperature" aria-label="temperature" aria-describedby="basic-addon1">
+      </div>
+      <div class="input-group mb-3">
 
+        <input type="text" class="form-control" [(ngModel)]="pod.elec" placeholder="elec" aria-label="elec" aria-describedby="basic-addon1">
+      </div>
 
-
-          </tr>
-
-
-
-
-
-
-
-                        <tr *ngFor=" let rack of racks ; let i = index" >
-                          <td>
-                            {{rack.id}}
-                          </td>
-                          <td>
-                           {{rack.name}}
-                          </td>
-                          <td>
-                           {{rack.position}}
-                          </td>
-                          <td> <img (click)="deleteUser(rack.id)" (click)="delete(i)" src="assets/img/x-button.png" ></td>
-                          <td> <img (click)="modify(rack.id)" src="assets/img/captcha.png" ></td>
-                        </tr>
-                        <a  href="./add-rock">
-                          <button  class="btn btn-primary pull-right">Ajouter Un Rack</button></a>
-
-                    </table>
+      <button type="button" (click)="ajouter()"  class="btn btn-primary btn-lg btn-block">Ajouter un pod <img src="assets/img/add.png" ></button>
 
 
 
 
-                  </div>
 
+
+
+         </div>
+        </div>
+       </div>

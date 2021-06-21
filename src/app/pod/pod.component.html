@@ -75,7 +75,7 @@
       <span class="tooltip">Servers</span>
     </li>
     <li>
-      <a href="#">
+      <a href="network">
         <i><img src="assets\img\deal.png" ></i>
         <span class="links_name">Fournisseur</span>
       </a>
@@ -106,27 +106,25 @@
 
 
 <div class="home_content">
-
-
-  <h1>Gestion des Rack </h1>
+  <h1>Gestion des Pods </h1>
   <hr>
   <div class="main11">
     <div class="input-group">
-      <input type="text" class="form-control" placeholder="Chercher les Racks">
+      <input type="text" class="form-control" placeholder="Chercher les Pod">
       <div class="input-group-append">
-        <button class="btn btn-secondary" type="button">
+        <button  type="button">
           <img src="assets\img\search.png">
         </button>
       </div>
-    </div></div>
+    </div></div><br>
 
   <table>
-
-
     <tr id="header">
             <th >ID</th>
             <th >Nom</th>
-            <th >Position</th>
+            <th >Humidité</th>
+            <th>Temperature</th>
+            <th>Electricité</th>
             <th>Supprimer</th>
             <th>Modifier</th>
 
@@ -140,21 +138,27 @@
 
 
 
-                        <tr *ngFor=" let rack of racks ; let i = index" >
+                        <tr *ngFor=" let po of pod ; let i = index" >
                           <td>
-                            {{rack.id}}
+                            {{po.id}}
                           </td>
                           <td>
-                           {{rack.name}}
+                           {{po.name}}
                           </td>
                           <td>
-                           {{rack.position}}
+                           {{po.Humidite}}
                           </td>
-                          <td> <img (click)="deleteUser(rack.id)" (click)="delete(i)" src="assets/img/x-button.png" ></td>
-                          <td> <img (click)="modify(rack.id)" src="assets/img/captcha.png" ></td>
+                          <td>
+                            {{po.temperature}}
+                          </td>
+                          <td>
+                            {{po.elec}}
+                          </td>
+                          <td> <img (click)="deletepod(po.id)" (click)="delete(i)" src="assets/img/x-button.png" ></td>
+                          <td> <img (click)="modify(po.id)" src="assets/img/captcha.png" ></td>
                         </tr>
-                        <a  href="./add-rock">
-                          <button  class="btn btn-primary pull-right">Ajouter Un Rack</button></a>
+                        <a  href="./add-pod">
+                          <button  class="btn btn-primary pull-right">Ajouter Un pod</button></a>
 
                     </table>
 
@@ -162,4 +166,3 @@
 
 
                   </div>
-

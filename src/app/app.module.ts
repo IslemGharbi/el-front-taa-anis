@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -36,14 +35,12 @@ import { UpdateRouterComponent } from './networking/update-router/update-router.
 import { UpdateSwitchComponent } from './networking/update-switch/update-switch.component';
 import { UpdateFirewallComponent } from './networking/update-firewall/update-firewall.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 import { DashboardComponent } from './dashboard/dashboard.component';
-
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { NgxEchartsModule } from 'ngx-echarts';
-
-
-
+import { PODComponent } from './pod/pod.component';
+import { AddProdComponent } from './pod/add-prod/add-prod.component';
+import { UpdatePodComponent } from './pod/update-pod/update-pod.component';
 
 
 @NgModule({
@@ -78,6 +75,9 @@ import { NgxEchartsModule } from 'ngx-echarts';
     UpdateSwitchComponent,
     UpdateFirewallComponent,
     DashboardComponent,
+    PODComponent,
+    AddProdComponent,
+    UpdatePodComponent,
 
 
 
